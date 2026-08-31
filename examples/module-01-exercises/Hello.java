@@ -3,4 +3,3 @@ public class Hello {
         System.out.println("Hello, JVM!");
     }
 }
-//the application loader loaded Hello and Bootstrap loaded string

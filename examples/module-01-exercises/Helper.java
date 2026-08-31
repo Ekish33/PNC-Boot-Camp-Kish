@@ -3,3 +3,4 @@ public class Helper {
         return "helper-ok";
     }
 }
+////the application loader loaded Hello and Bootstrap loaded string
