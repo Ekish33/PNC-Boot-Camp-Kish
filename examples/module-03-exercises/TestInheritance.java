@@ -10,3 +10,19 @@ public class TestInheritance {
         System.out.println("Max Speed: " + myCar.maxSpeed);
     }
 }
+
+public class TestInheritance {
+ public static void main(String[] args) {
+ Dog d = new Dog();
+ // Inherited fields
+ d.name = "Tommy";
+ d.age = 3;
+ // Own field
+ d.breed = "Labrador";
+ // Inherited methods
+ d.eat(); // from Animal
+ d.sleep(); // from Animal
+ // Own method
+ d.bark(); // from Dog
+ }
+}

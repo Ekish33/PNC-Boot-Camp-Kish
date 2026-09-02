@@ -31,3 +31,12 @@
 
 #state is attributes
 #mbehavior is methods
+
+
+
+
+
+
+
+
+## I am struggling a lot on abstract classes, abstract methods, parent classes, interfaces
