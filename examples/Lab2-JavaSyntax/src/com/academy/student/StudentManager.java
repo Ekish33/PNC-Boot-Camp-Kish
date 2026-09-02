@@ -66,17 +66,38 @@ public class StudentManager {
 
     public void displayStudents() {
         // TODO: if empty, print "No students to display."
-        // TODO: otherwise call printStudentTable(students, studentCount, false)
-        throw new UnsupportedOperationException("TODO");
+        if (studentCount == 0) {
+            System.out.println("No students to display.");
+            return;
+        }
+        printStudentTable(students, studentCount, false);
     }
 
     public void searchStudent() {
         // TODO: read Student ID; find index; print display() or "Student Not Found."
+        System.out.print("Enter Student ID to search: ");
+        int studentID = readPositiveInt();
+        int index = findStudentIndex(studentID);
+        if (index != -1) {
+            students[index].display();
+        } else {
+            System.out.println("Student Not Found.");
+        }
         throw new UnsupportedOperationException("TODO");
     }
 
     public void calculateAverage() {
         // TODO: average of students[0..studentCount); printf "Average Marks : %.2f%n"
+        if (studentCount == 0) {
+            System.out.println("No students to calculate average.");
+            return;
+        }
+        double totalMarks = 0;
+        for (int i = 0; i < studentCount; i++) {
+            totalMarks += students[i].getMarks();
+        }
+        double average = totalMarks / studentCount;
+        System.out.printf("Average Marks : %.2f%n", average);
         throw new UnsupportedOperationException("TODO");
     }
 
